@@ -201,9 +201,11 @@ public class Experiment{
     /** Declare, instantiate, initialize and use a one-dimensional array.*/
     static void array(){
         int[] arr = new int[2]; //Array with two index positions
+        int i1 = 2;
         
         arr[0] = 1; //Set index 0 to 1
         arr[1] = 2; // Set index 1 to 2
+        arr[i1] = 3;
     
         for(int i = 0; i < arr.length; i++) { //Check if int i is less then the length of the array,
             System.out.println(arr[i]); //Will print the element on index positions
