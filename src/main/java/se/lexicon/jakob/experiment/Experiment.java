@@ -337,12 +337,15 @@ public class Experiment{
     /**==========================================================================================================================================================*/
     /** Manipulate data using the StringBuilder class and its methods.*/
     public static void stringBuilderManipulation(){
+        String str = "java";
         StringBuilder sb = new StringBuilder();
         sb.append('j'); //Add a new character or string at the last index of the StringBuilder.
         sb.append('a');
         sb.append('v');
         sb.append('a');
         System.out.println(sb.toString());
+        
+        String sbStr = sb.toString();
     
         sb.deleteCharAt(1); //Remove a character at the specified index of the StringBuilder.
         System.out.println(sb.toString());
@@ -357,6 +360,12 @@ public class Experiment{
     
         sb.replace(1,5, "bacon"); //Replace all characters including first specified index and excluding the last specified index.
         System.out.println(sb.toString());
+        
+        if(str.equals(sbStr)){
+            System.out.println("Same content");
+        }else{
+            System.out.println("Not the same content");
+        }
     }
     
     
@@ -375,7 +384,7 @@ public class Experiment{
         String str2 = "java";
         String str3 = str1;
         
-        if(str3 == str2 || str3 == str1){ //Check if this is the same object
+        if(str3 == str2 || str3 == str1){ //Check if this is the same object.
             System.out.println("Same object");
         }else{
             System.out.println("Not the same object");
@@ -383,8 +392,11 @@ public class Experiment{
         if(str3 == str1){
             System.out.println("str3 has the same object as str1");
         }
-        if(str2.equals(str1)){ //Check if the objects has the same content
-            System.out.println("str2 has the same content as str1");
+        if(str2 == str1){
+            System.out.println("Always false");
+        }
+        if(str2.equals(str1)){ //Compare the content of two objects, this will be false if it does not have the exact same content.
+            System.out.println("str2 does not have the same content as str1");
         }else{
             System.out.println("str2 does not have the same content as str1");
         }
@@ -482,7 +494,7 @@ public class Experiment{
         LoopConstructs lc = new LoopConstructs();
         
 //        stringManipulation();
-//        stringBuilderManipulation();
+        stringBuilderManipulation();
 //        primitiveCasting();
 
 //        lambdaExpression();
@@ -492,11 +504,11 @@ public class Experiment{
 //        dateTime();
 //        array();
 //        multiArray();
-        System.out.println(ol.overload(2,4));
-        System.out.println(ol.overload(2,2,4));
-        System.out.println(ol.overload("Palle", "Kuling"));
-        System.out.println(lc.forLoop());
-        System.out.println(lc.forEachLoop());
+//        System.out.println(ol.overload(2,4));
+//        System.out.println(ol.overload(2,2,4));
+//        System.out.println(ol.overload("Palle", "Kuling"));
+//        System.out.println(lc.forLoop());
+//        System.out.println(lc.forEachLoop());
 //        stringEquality();
 //        handleException();
 //        intCasting();
@@ -504,7 +516,7 @@ public class Experiment{
 //        ternaryOperator();
         
         
-        wrapperClasses();
+        //wrapperClasses();
         scan.close();
     }
     
